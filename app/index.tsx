@@ -1,15 +1,13 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import MainPage from "../components/main-page";
+
+
 
 export default function Index() {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      style={{flex: 1,}}>
+      <MainPage />  
     </View>
   );
 }
