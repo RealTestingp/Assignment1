@@ -7,6 +7,8 @@ import {
     StyleSheet,
     View,
 } from "react-native";
+import BottomNav from "./BottomNav";
+import CreditCards from "./CreditCards";
 import DepositAccount from "./DepositAccount";
 
 export default function MainPage() {
@@ -36,7 +38,9 @@ export default function MainPage() {
 						onPress={() => alert("Alert Button Pressed")}
 					/>
 				</View>
-                <DepositAccount />
+				<DepositAccount />
+				<CreditCards />
+				<BottomNav />
 			</ScrollView>
 		</View>
 	);
