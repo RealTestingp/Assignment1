@@ -7,7 +7,6 @@ import {
     StyleSheet,
     View,
 } from "react-native";
-import BottomNav from "./BottomNav";
 import CreditCards from "./CreditCards";
 import DepositAccount from "./DepositAccount";
 
@@ -40,7 +39,6 @@ export default function MainPage() {
 				</View>
 				<DepositAccount />
 				<CreditCards />
-				<BottomNav />
 			</ScrollView>
 		</View>
 	);
