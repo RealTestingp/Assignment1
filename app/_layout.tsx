@@ -14,28 +14,28 @@ export default function RootLayout() {
 				name="index"
 				options={{
 					title: "Home",
-					tabBarIcon: () => <Text>House Icon</Text>,
+					tabBarIcon: () => <Text>Home Icon</Text>,
 				}}
 			/>
 			<Tabs.Screen
 				name="move-money"
 				options={{
 					title: "Move money",
-					tabBarIcon: () => <Text>Money Icon</Text>,
+					tabBarIcon: () => <Text>2 Arrows Icon</Text>,
 				}}
 			/>
 			<Tabs.Screen
 				name="advice"
 				options={{
 					title: "Advice",
-					tabBarIcon: () => <Text>Stock Icon</Text>,
+					tabBarIcon: () => <Text>Advice Icon</Text>,
 				}}
 			/>
 			<Tabs.Screen
 				name="more"
 				options={{
 					title: "More",
-					tabBarIcon: () => <Text>⋮</Text>,
+					tabBarIcon: () => <Text>4 Grid Icon</Text>,
 				}}
 			/>
 		</Tabs>
