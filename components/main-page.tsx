@@ -5,6 +5,8 @@ import {
     ScrollView,
     StatusBar,
     StyleSheet,
+    Text,
+    TouchableOpacity,
     View,
 } from "react-native";
 import CreditCards from "./CreditCards";
@@ -15,25 +17,33 @@ export default function MainPage() {
 		<View style={styles.container}>
 			{/*Header*/}
 			<View style={styles.header}>
+                {/*Logo*/}
 				<Image
 					source={{
-						uri: "https://upload.wikimedia.org/wikipedia/en/4/48/CIBC_logo_2021.svg",
+						uri: "https://1000logos.net/wp-content/uploads/2021/10/CIBC-Logo-768x432.png",
 					}}
 					style={styles.logo}
 				/>
-				<Image
-					source={{
-						uri: "https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-search-icon-png-image_927190.jpg",
-					}}
-					style={styles.searchicon}
-				/>
+                {/*Search and Profile Icons*/}
+                <View style={styles.icon}>
+                    <Image
+                        source={{
+                            uri: "https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-search-icon-png-image_927190.jpg",
+                        }}
+                        style={styles.searchicon}
+                    />
+                
+                    <TouchableOpacity style={styles.profile}>
+                        <Text style={styles.profileText}>GR</Text>
+                    </TouchableOpacity>
+                    </View>
 			</View>
 			{/* Alert Button*/}
 			<ScrollView>
 				<View style={styles.alertbutton}>
 					<Button
 						title="Alert"
-						color="darkred"
+						color="#be123c"
 						onPress={() => alert("Alert Button Pressed")}
 					/>
 				</View>
@@ -54,25 +64,48 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		flexDirection: "row",
-		padding: 10,
+		//padding: 10,
+        paddingHorizontal: 10,
+        paddingVertical: 15,
 		alignItems: "center",
 		backgroundColor: "white",
 		justifyContent: "space-between",
 	},
 	logo: {
 		width: 100,
-		height: 50,
+		height: 70,
 		resizeMode: "contain",
-		marginLeft: 10,
+		//marginLeft: 10,
 	},
 	searchicon: {
 		width: 30,
 		height: 30,
 		borderRadius: 40,
 		borderWidth: 1,
-		borderColor: "darkred",
-		marginRight: 10,
+		borderColor: "#be123c",
+		//marginLeft: 10,
 	},
+
+    profileText: {
+        color: "white",
+        fontWeight: "bold", 
+        fontSize: 12,
+        
+    },
+    icon: {
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 10,
+    },
+
+    profile: {
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+        backgroundColor: "#be123c",
+        justifyContent: "center",
+        alignItems: "center",
+    },
 
 	alertbutton: {
 		alignSelf: "flex-end",
