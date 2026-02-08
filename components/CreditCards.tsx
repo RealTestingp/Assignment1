@@ -13,12 +13,23 @@ export default function CreditCards() {
 					<Text style={styles.ammountText}>$1,234.56</Text>
 					<View>
 						<Image
-							source={{ uri: "https://www.cibc.com/content/dam/global-assets/card-art/credit-cards/select-cards/cibc-select-visa-card/cibc-visa-select-en.png/_jcr_content/renditions/cq5dam.web.767.767.png", }}
+							source={{
+								uri: "https://www.cibc.com/content/dam/global-assets/card-art/credit-cards/select-cards/cibc-select-visa-card/cibc-visa-select-en.png/_jcr_content/renditions/cq5dam.web.767.767.png",
+							}}
 							style={styles.credit}
 						/>
 					</View>
-					
 				</View>
+
+				<View style={styles.buttonposition}>
+					<TouchableOpacity style={styles.button}>
+						<Text style={styles.paybutton}>Pay card</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={[styles.button, styles.morebutton]}>
+						<Text style={styles.moreText}>...</Text>
+					</TouchableOpacity>
+				</View>
+
 				<TouchableOpacity style={styles.arrowcontainer}>
 					<Text style={styles.arrow}>{`>`}</Text>
 				</TouchableOpacity>
@@ -27,7 +38,6 @@ export default function CreditCards() {
 	);
 }
 const styles = StyleSheet.create({
-
 	heading: {
 		fontSize: 15,
 		marginLeft: 20,
@@ -68,12 +78,42 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	},
 
-	credit:{
+	credit: {
 		width: 90,
 		height: 80,
 		resizeMode: "contain",
 	},
-	
-	
-
+	buttonposition: {
+		flexDirection: "row",
+		alignItems: "flex-end",
+		justifyContent: "flex-end",
+		gap: 10,
+		flex: 1,
+	},
+	button: {
+		borderColor: "darkgrey",
+		backgroundColor: "white",
+		borderWidth: 1,
+		borderRadius: 5,
+	},
+	paycardbutton: {
+		paddingVertical: 6,
+		paddingHorizontal: 10,
+		fontSize: 12,
+	},
+	moreText: {
+		fontSize: 20,
+		marginTop: 0,
+	},
+	morebutton: {
+		width: 30,
+		height: 30,
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	paybutton: {
+		paddingVertical: 6,
+		paddingHorizontal: 10,
+		fontSize: 12,
+	},
 });

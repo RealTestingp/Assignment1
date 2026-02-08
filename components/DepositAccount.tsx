@@ -13,17 +13,19 @@ export default function DepositAccount() {
 					<Text style={styles.ammountText}>$300.00</Text>
 					<View>
 						<Image
-							source={{ uri: "https://www.cibc.com/content/dam/global-assets/card-art/debit-cards/cibc-advantage-debit-card/cibc-advantage-debit-en.png/_jcr_content/renditions/cq5dam.web.1280.1280.png", }}
+							source={{
+								uri: "https://www.cibc.com/content/dam/global-assets/card-art/debit-cards/cibc-advantage-debit-card/cibc-advantage-debit-en.png/_jcr_content/renditions/cq5dam.web.1280.1280.png",
+							}}
 							style={styles.debit}
 						/>
 					</View>
 				</View>
 				<View style={styles.buttonposition}>
 					<TouchableOpacity style={styles.button}>
-						<Text style ={styles.sendbutton}>Send money</Text>
+						<Text style={styles.sendbutton}>Send money</Text>
 					</TouchableOpacity>
-						<TouchableOpacity style={[styles.button, styles.morebutton]}>
-						<Text style ={styles.moreText}>...</Text>
+					<TouchableOpacity style={[styles.button, styles.morebutton]}>
+						<Text style={styles.moreText}>...</Text>
 					</TouchableOpacity>
 				</View>
 				<TouchableOpacity style={styles.arrowcontainer}>
@@ -43,11 +45,11 @@ export default function DepositAccount() {
 			</View>
 
 			<View style={styles.totalcontainer}>
-				<Text style ={styles.totalText}>Total</Text>
+				<Text style={styles.totalText}>Total</Text>
 				<View style={styles.total}>
-					<Text style ={styles.totalText}>$9,500.00</Text>
+					<Text style={styles.totalText}>$9,500.00</Text>
 					<TouchableOpacity>
-						<Text style={styles.info}>{`①`}</Text>
+						<Text style={styles.info}>{`ⓘ`}</Text>
 					</TouchableOpacity>
 				</View>
 			</View>
@@ -55,7 +57,6 @@ export default function DepositAccount() {
 	);
 }
 const styles = StyleSheet.create({
-
 	heading: {
 		fontSize: 15,
 		marginLeft: 20,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
 		marginRight: 20,
 	},
 
-	debit:{
+	debit: {
 		width: 90,
 		height: 80,
 		resizeMode: "contain",
@@ -98,26 +99,22 @@ const styles = StyleSheet.create({
 		justifyContent: "flex-end",
 		gap: 10,
 		flex: 1,
-	
 	},
 
-	button:{
+	button: {
 		borderColor: "darkgrey",
 		backgroundColor: "white",
 		borderWidth: 1,
 		borderRadius: 5,
-		
 	},
 
-	sendbutton:{
+	sendbutton: {
 		paddingVertical: 6,
 		paddingHorizontal: 10,
-		//height: 30,
-		//width: 100,
 		fontSize: 12,
 	},
 
-	moreText:{
+	moreText: {
 		fontSize: 20,
 		marginTop: 0,
 	},
@@ -127,7 +124,6 @@ const styles = StyleSheet.create({
 		height: 30,
 		alignItems: "center",
 		justifyContent: "center",
-		
 	},
 	arrow: {
 		fontSize: 25,
@@ -149,9 +145,8 @@ const styles = StyleSheet.create({
 		marginVertical: 10,
 		marginLeft: 20,
 		marginRight: 20,
-
 	},
-	total:{
+	total: {
 		flexDirection: "row",
 		alignItems: "center",
 		gap: 10,
@@ -161,7 +156,7 @@ const styles = StyleSheet.create({
 		fontSize: 15,
 		color: "black",
 		fontWeight: "bold",
-	}, 
+	},
 
 	info: {
 		fontSize: 15,

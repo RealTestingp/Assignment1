@@ -5,37 +5,67 @@
 // }
 
 import { Tabs } from "expo-router";
-import { Text } from "react-native";
+import { Image } from "react-native";
 
 export default function RootLayout() {
 	return (
-		<Tabs screenOptions={{ headerShown: false }}>
+		<Tabs
+			screenOptions={{
+				headerShown: false,
+				tabBarLabelPosition: "below-icon",
+				tabBarInactiveTintColor: "black",
+				tabBarActiveTintColor: "#be123c",
+			}}
+		>
 			<Tabs.Screen
 				name="index"
 				options={{
 					title: "Home",
-					tabBarIcon: () => <Text>Home Icon</Text>,
+					tabBarIcon: ({ focused, color }) => (
+						<Image
+							source={require("../assets/images/home.png")}
+							style={{ width: 20, height: 20, tintColor: color }}
+						/>
+					),
 				}}
 			/>
+
 			<Tabs.Screen
 				name="move-money"
 				options={{
 					title: "Move money",
-					tabBarIcon: () => <Text>2 Arrows Icon</Text>,
+					tabBarIcon: ({ color }) => (
+						<Image
+							source={require("../assets/images/move-money.png")}
+							style={{ width: 20, height: 20, tintColor: color }}
+						/>
+					),
 				}}
 			/>
+
 			<Tabs.Screen
 				name="advice"
 				options={{
 					title: "Advice",
-					tabBarIcon: () => <Text>Advice Icon</Text>,
+					tabBarIcon: ({ color }) => (
+						<Image
+							source={require("../assets/images/advice.png")}
+							style={{ width: 20, height: 20, tintColor: color }}
+						/>
+					),
 				}}
 			/>
+
 			<Tabs.Screen
 				name="more"
 				options={{
 					title: "More",
-					tabBarIcon: () => <Text>4 Grid Icon</Text>,
+					tabBarIcon: ({ color }) => (
+						<Image
+							source={require("../assets/images/more.png")}
+							style={{ width: 20, height: 20, tintColor: color }}
+						/>
+					),
 				}}
 			/>
 		</Tabs>
